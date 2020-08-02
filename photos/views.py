@@ -4,3 +4,8 @@ import datetime as dt
 from .models import Image,Location,Category
 
 # Create your views here.
+def index(request):
+    
+    photos=Image.get_photos()
+
+    return render(request,'index.html',{"photos":photos})
