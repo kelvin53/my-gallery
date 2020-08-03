@@ -54,7 +54,7 @@ def copy_image(from_model, to_model):
     to_model.image.save(from_model.image.url.split('/')[-1],from_model.image.file,save=True)
 
 def search_results(request):
-
+    
     if 'image' in request.GET and request.GET["image"]:
         search_term = request.GET.get("image")
         searched_images = Image.search_by_category(search_term)
