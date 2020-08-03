@@ -69,6 +69,7 @@ pyRFC3339==1.0
 python-apt==1.6.2
 python-dateutil==2.8.1
 python-debian==0.1.32
+python-decouple==3.3
 python-dotenv==0.14.0
 python-editor==1.0.4
 pytz==2018.3
