@@ -20,7 +20,7 @@ from config import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODE=config("MODE", default="dev")
+MODE=os.environ.get("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
@@ -40,7 +40,7 @@ if os.environ.get('MODE')=="dev":
 else:
     DATABASES = {
     'default':dj_database_url.config(
-        default=config('DATABASE_URL')
+        default=os.environ.get('DATABASE_URL')
     )
     }
 
