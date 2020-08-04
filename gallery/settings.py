@@ -1,5 +1,3 @@
-DEBUG=True #set to false in production
-
 
 
 """
@@ -53,7 +51,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS',cast=Csv())
 
 
 
-ALLOWED_HOSTS = ['.localhost', 'https://k-gallery.herokuapp.com/', '.127.0.0.1']
+ALLOWED_HOSTS = ['.localhost', '.herokuapp.com/', '.127.0.0.1']
 
 
 # Application definition
